@@ -355,7 +355,7 @@ ol {
 	left: -10cm;
 	top: 40px;
 	margin-top: 30px;
-	width: 26cm;
+	width: 21cm;
 	background: #7d5ccc;
 	opacity: 0;
 	visibility: hidden;
@@ -422,7 +422,8 @@ ol {
 
 .header__menu ul li.active a:after {
 	opacity: 1;
-	height: 50%;
+	height: 100%;
+	border-radius: 10px;
 }
 
 .header__menu ul li:hover .dropdown {
@@ -433,7 +434,8 @@ ol {
 
 .header__menu ul li:hover a:after {
 	opacity: 1;
-	height: 50%;
+	height: 100%;
+	border-radius: 10px;
 }
 
 .header__menu ul li a {
@@ -2650,6 +2652,153 @@ ol {
 /* Tablet Device = 768px */
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+	.header__info {
+		display: none;
+	}
+	.header__menu {
+		display: none;
+	}
+	.header-section .container {
+		position: relative;
+	}
+	.offcanvas__menu__overlay {
+		position: fixed;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background: rgba(0, 0, 0, 0.5);
+		z-index: 98;
+		visibility: hidden;
+		-webkit-transition: all 0.3s;
+		-o-transition: all 0.3s;
+		transition: all 0.3s;
+	}
+	.offcanvas__menu__overlay.active {
+		visibility: visible;
+	}
+	.canvas__open {
+		display: block;
+		font-size: 20px;
+		color: #ffffff;
+		height: 30px;
+		width: 30px;
+		line-height: 30px;
+		text-align: center;
+		border: 1px solid #ffffff;
+		cursor: pointer;
+		position: absolute;
+		right: 15px;
+		top: 30px;
+	}
+	.offcanvas__menu__wrapper {
+		display: block;
+		width: 300px;
+		position: fixed;
+		left: -300px;
+		top: 0;
+		background: #111111;
+		z-index: 999;
+		height: 100%;
+		overflow-y: auto;
+		padding-left: 30px;
+		padding-bottom: 30px;
+		padding-top: 80px;
+		padding-right: 30px;
+		opacity: 0;
+		-webkit-transition: all 0.3s;
+		-o-transition: all 0.3s;
+		transition: all 0.3s;
+	}
+	.offcanvas__menu__wrapper.show__offcanvas__menu {
+		opacity: 1;
+		left: 0;
+	}
+	.offcanvas__menu__wrapper .canvas__close {
+		font-size: 30px;
+		color: #ffffff;
+		position: absolute;
+		right: 30px;
+		top: 20px;
+		cursor: pointer;
+	}
+	.offcanvas__menu__wrapper .offcanvas__logo {
+		margin-bottom: 30px;
+	}
+	.offcanvas__menu__wrapper .offcanvas__menu {
+		display: none;
+	}
+	.offcanvas__menu__wrapper .slicknav_btn {
+		display: none;
+	}
+	.offcanvas__menu__wrapper .slicknav_nav .slicknav_item a {
+		border-bottom: none !important;
+	}
+	.offcanvas__menu__wrapper .slicknav_nav {
+		display: block !important;
+	}
+	.offcanvas__menu__wrapper .slicknav_menu {
+		background: transparent;
+		padding: 0;
+		margin-bottom: 30px;
+	}
+	.offcanvas__menu__wrapper .slicknav_nav ul {
+		margin: 0;
+	}
+	.offcanvas__menu__wrapper .slicknav_nav a {
+		color: #ffffff;
+		font-size: 16px;
+		font-weight: 500;
+		margin: 0;
+		border-bottom: 1px solid #e1e1e1;
+	}
+	.offcanvas__menu__wrapper .slicknav_nav a:hover {
+		border-radius: 0;
+		background: transparent;
+		color: #111111;
+	}
+	.offcanvas__menu__wrapper .slicknav_nav .slicknav_row,
+	.offcanvas__menu__wrapper .slicknav_nav a {
+		padding: 8px 0;
+	}
+	.offcanvas__menu__wrapper .offcanvas__info ul li {
+		font-size: 16px;
+		color: #ffffff;
+		list-style: none;
+		margin-bottom: 10px;
+	}
+	.offcanvas__menu__wrapper .offcanvas__info ul li span {
+		height: 30px;
+		width: 30px;
+		background: rgba(255, 255, 255, 0.1);
+		border-radius: 50%;
+		line-height: 30px;
+		text-align: center;
+		display: inline-block;
+		margin-right: 5px;
+	}
+	.offcanvas__menu__wrapper .offcanvas__auth {
+		margin-bottom: 20px;
+	}
+	.offcanvas__menu__wrapper .offcanvas__auth ul li {
+		list-style: none;
+		margin-bottom: 10px;
+	}
+	.offcanvas__menu__wrapper .offcanvas__auth ul li a {
+		font-size: 16px;
+		color: #ffffff;
+		display: block;
+	}
+	.offcanvas__menu__wrapper .offcanvas__auth ul li a span {
+		height: 30px;
+		width: 30px;
+		background: rgba(255, 255, 255, 0.1);
+		border-radius: 50%;
+		line-height: 30px;
+		text-align: center;
+		display: inline-block;
+		margin-right: 5px;
+	}
 	.register__text .register__result ul li {
 		margin-right: 50px;
 	}
